@@ -17,7 +17,11 @@ activos = {
     "Bitcoin (BTC-USD)": "BTC-USD",
     "Ethereum (ETH-USD)": "ETH-USD",
     "Apple (AAPL)": "AAPL",
-    "Nvidia (NVDA)": "NVDA"
+    "Nvidia (NVDA)": "NVDA",
+    "Tesla (TSLA)": "TSLA",
+    "S&P 500 (Índice USA)": "^GSPC",
+    "Amazon (AMZN)": "AMZN",
+    "Microsoft (MSFT)": "MSFT"
 }
 seleccion = st.sidebar.selectbox("Selecciona un Activo", list(activos.keys()))
 ticker = activos[seleccion]
@@ -65,4 +69,5 @@ if st.sidebar.button("Analizar e Invertir"):
             fig_cm, ax_cm = plt.subplots()
             disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Baja', 'Sube'])
             disp.plot(ax=ax_cm, cmap='Blues')
+
             st.pyplot(fig_cm)
