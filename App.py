@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="Estratega de Inversión Pro - ESPOL", layout="wide")
 
-st.title(" Sistema de Decisión de Inversión Mejorado")
+st.title(" Sistema de Decisión de Inversión")
 st.markdown("### Proyecto de Matemáticas Discretas: Optimización de Grafos de Decisión")
 
 st.sidebar.header("Configuración de Activos")
@@ -76,3 +76,4 @@ if st.sidebar.button("Ejecutar Análisis Optimizado"):
             disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['Baja', 'Sube'])
             disp.plot(ax=ax_cm, cmap='Greens')
             st.pyplot(fig_cm)
+
